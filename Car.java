@@ -1,14 +1,12 @@
 public class Car {
+    private int id;
+    private String brand;
+    private String model;
+    private int year;
+    private String color;
+    private double price;
+    private String registrationNumber;
 
-    private int id;             // Идентификатор автомобиля
-    private String brand;       // Марка автомобиля
-    private String model;       // Модель автомобиля
-    private int year;           // Год выпуска автомобиля
-    private String color;       // Цвет автомобиля
-    private double price;       // Цена автомобиля
-    private String registrationNumber; // Регистрационный номер автомобиля
-
-     // Конструктор, принимающий значения полей в качестве параметров
     public Car(int id, String brand, String model, int year, String color, double price, String registrationNumber) {
         this.id = id;
         this.brand = brand;
@@ -19,76 +17,72 @@ public class Car {
         this.registrationNumber = registrationNumber;
     }
 
-    // Геттеры (нестатические)
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getRegistrationNumber() {
-        return registrationNumber;
-    }
-
-    // Сеттеры (нестатические)
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
     }
 
     public void setModel(String model) {
         this.model = model;
     }
 
+    public int getYear() {
+        return year;
+    }
+
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     public void setColor(String color) {
         this.color = color;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
 
-   // Переопределенный метод toString()
-  @Override
-  public String toString() {
-    return "Car{" +
-      "id=" + id +
-      ", brand='" + brand + '\'' +
-      ", model='" + model + '\'' +
-      ", year=" + year +
-      ", color='" + color + '\'' +
-      ", price=" + price +
-      ", registrationNumber='" + registrationNumber + '\'' +
-     '}';
-  }
- }
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", color='" + color + '\'' +
+                ", price=" + price +
+                ", registrationNumber='" + registrationNumber + '\'' +
+                '}';
+    }
+}
